@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect } from 'react'
+import { useEffect } from 'react'
 import { Link, useHistory } from "react-router-dom";
 import { Container } from "./styles";
 import { useForm, FormActions } from '../../contexts/FormContext'
