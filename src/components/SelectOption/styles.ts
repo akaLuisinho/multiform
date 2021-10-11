@@ -8,10 +8,6 @@ export const Container = styled.div<{ selected: boolean}>`
     margin-bottom: 15px;
     align-items: center;
     cursor: pointer;
-
-    &:hover {
-        border: 2px solid #496459
-    }
 `
 
 export const Icon = styled.div`

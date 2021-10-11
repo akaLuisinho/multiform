@@ -22,32 +22,33 @@ export function FormStep3() {
         }
     }, [])
 
-    function handleSubmit() {
-        if(state.email !== '' && state.github !== '') {
-            console.log(state);
-        } else {
-            alert('Preencha os dados')
-        }
-    }
-
+    
     function handleEmailChange(e: ChangeEvent<HTMLInputElement>) {
         dispatch({ 
             type: FormActions.setEmail,
             payload: e.target.value
         })
     }
-
+    
     function handleGithubChange(e: ChangeEvent<HTMLInputElement>) {
         dispatch({
             type: FormActions.setGithub,
             payload: e.target.value
         })
     }
+    
+    function handleSubmit() {
+        if(state.email !== '' && state.github !== '') {
+            history.push('/step4')
+        } else {
+            alert('Preencha os dados')
+        }
+    }
 
     return(
         <Theme>
             <Container>
-                <p>Passo 3/3</p>
+                <p>Passo 3/4</p>
                 <h1>Legal {state.name}, e onde te achamos?</h1>
                 <p>Preencha com seus dados para entrarmos em contato</p>
 

@@ -7,8 +7,10 @@ type Props = {
     selected: boolean,
     onClick: () => void;
 }
+
 export function SelectOption({ title, description, icon, selected, onClick }: Props) {
     return(
+        
         <Container onClick={onClick} selected={selected}>
             <Icon>{icon}</Icon>
             <Info>
